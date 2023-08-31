@@ -23,7 +23,16 @@ Se realiza el levantamiento del servidor desde el IDE o ejecutando el compilado 
 }
 ```
 - GET ver usuario: http://localhost:8080/users/{idUsuario}
+- PUT actualiza un usuario: http://localhost:8080/users/{idUsuario} - el body debe contener las variables: correo, apellido y nombre como minimo
+```
+{
+    "nombre": "JOSE",
+    "apellido": "JOSE1",
+    "correo": "Jw1fO2efSE23rw423",
+    "fechaNacimiento": "2023-02-02"
+}
+```
 - DELETE eliminar usuario: http://localhost:8080/users/{idUsuario}
-- GET ver todos los usuarios: 
-- GET paginar usuarios: 
-- GET ver salud del servicio: 
+- GET ver todos los usuarios: http://localhost:8080/users
+- GET paginar usuarios: http://localhost:8080/users/{size}/{page}
+- GET ver salud del servicio: http://localhost:8080/health
